@@ -1,0 +1,29 @@
+{
+  "nav": {
+    "brands": "For Brands",
+    "creators": "For Creators",
+    "cases": "Cases",
+    "cta": "Get Started"
+  },
+  "hero": {
+    "badge": "Selected Work — 2026",
+    "title_part1": "Visual",
+    "title_accent": "Storytelling.",
+    "description": "We build high-converting, hook-first video ads for SaaS, Apps, and DTC brands. No fluff, just performance-driven creative infrastructure.",
+    "cta_primary": "Start a Project",
+    "cta_secondary": "View Cases"
+  },
+  "filters": {
+    "services": "Services",
+    "industries": "Industries",
+    "all": "All"
+  },
+  "footer": {
+    "title": "Let's generate your next winner.",
+    "input_placeholder": "Enter your brand URL or goal...",
+    "submit": "Initialize",
+    "status": "System Status",
+    "online": "Production API is online",
+    "capacity": "Capacity: Accepting 2 more partners."
+  }
+}

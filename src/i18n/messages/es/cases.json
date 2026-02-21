@@ -1,0 +1,62 @@
+[
+  {
+    "id": "1",
+    "title": "Enterprise Analytics Platform",
+    "desc": "Redefining data visualization for modern SaaS infrastructures. Focusing on conversion rates and user clarity.",
+    "category": "SaaS",
+    "service": "Motion Design",
+    "thumbnail": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
+    "format": "wide",
+    "youtubeId": "dQw4w9WgXcQ"
+  },
+  {
+    "id": "2",
+    "title": "Urban Outfitters — Winter Drive",
+    "desc": "Cinematic e-commerce experience showcasing the 2026 Winter Collection with high-energy AI editing.",
+    "category": "DTC",
+    "service": "Video Editing",
+    "thumbnail": "https://images.unsplash.com/photo-1515347619152-14142c23bf32?auto=format&fit=crop&q=80&w=800",
+    "format": "tall",
+    "youtubeId": "dQw4w9WgXcQ"
+  },
+  {
+    "id": "3",
+    "title": "Tech Conference 2026",
+    "desc": "Main event highlight reel. Dynamic transitions and AI-powered sound design for maximum impact.",
+    "category": "Event",
+    "service": "Video Editing",
+    "thumbnail": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=800",
+    "format": "square",
+    "youtubeId": "dQw4w9WgXcQ"
+  },
+  {
+    "id": "4",
+    "title": "AI Showreel '26",
+    "desc": "A collection of our best AI-generated motion works. Pushing the boundaries of visual production.",
+    "category": "Content",
+    "service": "Motion Design",
+    "thumbnail": "https://images.unsplash.com/photo-1616469829581-73993eb86b02?auto=format&fit=crop&q=80&w=800",
+    "format": "tall",
+    "youtubeId": "dQw4w9WgXcQ"
+  },
+  {
+    "id": "5",
+    "title": "Luxury Real Estate — Riviera",
+    "desc": "Breathtaking property tour using AI stabilization and cinematic color grading for high-end buyers.",
+    "category": "Real Estate",
+    "service": "AI video production",
+    "thumbnail": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=800",
+    "format": "square",
+    "youtubeId": "dQw4w9WgXcQ"
+  },
+  {
+    "id": "6",
+    "title": "FinanceFlow App Launch",
+    "desc": "Strategic product launch video for a leading fintech app. Explainer motion design with 10k+ conversions.",
+    "category": "SaaS",
+    "service": "Motion Design",
+    "thumbnail": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800",
+    "format": "tall",
+    "youtubeId": "dQw4w9WgXcQ"
+  }
+]

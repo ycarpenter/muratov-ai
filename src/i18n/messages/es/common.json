@@ -1,0 +1,29 @@
+{
+  "nav": {
+    "brands": "Para Marcas",
+    "creators": "Para Creadores",
+    "cases": "Casos",
+    "cta": "Empezar"
+  },
+  "hero": {
+    "badge": "Trabajos Seleccionados — 2026",
+    "title_part1": "Narrativa",
+    "title_accent": "Visual.",
+    "description": "Creamos anuncios de video de alta conversión para SaaS, aplicaciones y marcas DTC. Sin adornos, solo infraestructura creativa orientada al rendimiento.",
+    "cta_primary": "Iniciar Proyecto",
+    "cta_secondary": "Ver Casos"
+  },
+  "filters": {
+    "services": "Servicios",
+    "industries": "Industrias",
+    "all": "Todos"
+  },
+  "footer": {
+    "title": "¿Generamos tu próximo éxito?",
+    "input_placeholder": "Introduce la URL de tu marca...",
+    "submit": "Inicializar",
+    "status": "Estado del Sistema",
+    "online": "API de producción en línea",
+    "capacity": "Capacidad: Aceptando 2 socios más."
+  }
+}
