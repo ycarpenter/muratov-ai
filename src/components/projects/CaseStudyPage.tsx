@@ -62,7 +62,7 @@ export function CaseStudyPage({ selectedCase, onClose, openQuiz }: CaseStudyPage
             {/* Трюк з масштабуванням iframe, щоб приховати рамки YouTube */}
             <iframe
               className="absolute w-[300vw] h-[300vh] sm:w-[150vw] sm:h-[150vh] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none scale-[1.05]"
-              src={`https://www.youtube.com/embed/${selectedCase.youtubeId}?autoplay=1&mute=1&modestbranding=1&rel=0&controls=0&showinfo=0&loop=1&playlist=${selectedCase.youtubeId}&color=white`}
+              src={`https://www.youtube-nocookie.com/embed/${selectedCase.youtubeId}?autoplay=1&mute=1&modestbranding=1&rel=0&controls=0&showinfo=0&loop=1&playlist=${selectedCase.youtubeId}&color=white`}
               title={selectedCase.title}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
               allowFullScreen
@@ -157,7 +157,7 @@ export function CaseStudyPage({ selectedCase, onClose, openQuiz }: CaseStudyPage
           >
             <iframe
               className="absolute inset-0 w-full h-full"
-              src={`https://www.youtube.com/embed/${selectedCase.youtubeId}?autoplay=1&rel=0&modestbranding=1&color=white`}
+              src={`https://www.youtube-nocookie.com/embed/${selectedCase.youtubeId}?autoplay=1&rel=0&modestbranding=1&color=white`}
               title={selectedCase.title}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
               allowFullScreen
