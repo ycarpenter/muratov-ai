@@ -42,7 +42,7 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
       />
 
       {/* Основний контент сторінки */}
-      <div className="flex-grow">{children}</div>
+      <div className="grow">{children}</div>
 
       <Footer onOpenQuiz={() => setIsQuizOpen(true)} />
 

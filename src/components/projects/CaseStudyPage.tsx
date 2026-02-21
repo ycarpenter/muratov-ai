@@ -38,9 +38,9 @@ export function CaseStudyPage({ selectedCase, onClose, openQuiz }: CaseStudyPage
     "focus:outline-none focus-visible:ring-2 focus-visible:ring-red-600 focus-visible:ring-offset-2 focus-visible:ring-offset-[#050505]"
 
   return (
-    <div className="fixed inset-0 z-[100] bg-[#050505] text-slate-300 font-sans selection:bg-red-600 selection:text-white animate-in fade-in duration-700 overflow-x-hidden overflow-y-auto">
+    <div className="fixed inset-0 z-100 bg-[#050505] text-slate-300 font-sans selection:bg-red-600 selection:text-white animate-in fade-in duration-700 overflow-x-hidden overflow-y-auto">
       {/* Мінімалістична темна навігація */}
-      <nav className="fixed top-0 left-0 right-0 h-24 px-6 md:px-12 flex items-center justify-between bg-gradient-to-b from-[#050505]/90 to-transparent z-50 pointer-events-none">
+      <nav className="fixed top-0 left-0 right-0 h-24 px-6 md:px-12 flex items-center justify-between bg-linear-to-b from-[#050505]/90 to-transparent z-50 pointer-events-none">
         <button
           onClick={onClose}
           className={`flex items-center gap-3 font-medium text-sm text-slate-400 hover:text-white transition-all group pointer-events-auto ${focusRingDark} rounded-full`}
@@ -57,7 +57,7 @@ export function CaseStudyPage({ selectedCase, onClose, openQuiz }: CaseStudyPage
 
       <main className="w-full relative">
         {/* 1. CINEMATIC HERO (Повноекранний фоновий плеєр) */}
-        <section className="relative w-full h-[100vh] bg-black flex flex-col justify-end overflow-hidden">
+        <section className="relative w-full h-100vh bg-black flex flex-col justify-end overflow-hidden">
           <div className="absolute inset-0 w-full h-full">
             {/* Трюк з масштабуванням iframe, щоб приховати рамки YouTube */}
             <iframe
@@ -71,7 +71,7 @@ export function CaseStudyPage({ selectedCase, onClose, openQuiz }: CaseStudyPage
             {/* Віньєтка для глибини та кіно-ефекту */}
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(5,5,5,0.85)_100%)] pointer-events-none"></div>
             {/* Градієнт знизу, щоб текст ідеально читався */}
-            <div className="absolute bottom-0 left-0 right-0 h-3/4 bg-gradient-to-t from-[#050505] via-[#050505]/80 to-transparent pointer-events-none"></div>
+            <div className="absolute bottom-0 left-0 right-0 h-3/4 bg-linear-to-t from-[#050505] via-[#050505]/80 to-transparent pointer-events-none"></div>
           </div>
 
           {/* Заголовок поверх відео */}
@@ -142,7 +142,7 @@ export function CaseStudyPage({ selectedCase, onClose, openQuiz }: CaseStudyPage
 
       {/* 4. FULL VIDEO MODAL */}
       {isFullVideoOpen && (
-        <div className="fixed inset-0 z-[200] flex items-center justify-center p-4 md:p-8 lg:p-12 animate-in fade-in duration-300">
+        <div className="fixed inset-0 z-200 flex items-center justify-center p-4 md:p-8 lg:p-12 animate-in fade-in duration-300">
           {/* Темний напівпрозорий backdrop */}
           <div
             className="absolute inset-0 bg-black/95 backdrop-blur-md cursor-pointer"
@@ -152,7 +152,7 @@ export function CaseStudyPage({ selectedCase, onClose, openQuiz }: CaseStudyPage
           {/* Контейнер відео — адаптується до формату (tall або wide) */}
           <div
             className={`relative w-full max-h-full bg-black rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl shadow-black/70 z-10 animate-in zoom-in-95 duration-300 ${
-              selectedCase.format === "tall" ? "max-w-[45vh] aspect-[9/16]" : "max-w-6xl aspect-video"
+              selectedCase.format === "tall" ? "max-w-[45vh] aspect-9/16" : "max-w-6xl aspect-video"
             }`}
           >
             <iframe

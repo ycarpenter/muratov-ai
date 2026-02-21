@@ -117,9 +117,7 @@ export default function App() {
           </p>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.9] animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100">
             Visual <br className="md:hidden" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-800">
-              Storytelling.
-            </span>
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-red-600 to-red-800">Storytelling.</span>
           </h1>
           <p className="mt-8 text-xl text-slate-500 max-w-2xl mx-auto font-light leading-relaxed animate-in fade-in slide-in-from-bottom-6 duration-700 delay-200">
             High-converting video ads for SaaS & DTC brands. AI-powered production for a fixed monthly fee.
@@ -199,7 +197,7 @@ export default function App() {
                           />
                         </div>
                       </div>
-                      <div className="hidden md:flex absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/10 to-transparent flex-col justify-end p-6 md:p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+                      <div className="hidden md:flex absolute inset-0 bg-linear-to-t from-slate-900/90 via-slate-900/10 to-transparent flex-col justify-end p-6 md:p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
                         <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                           <h3 className="text-xl lg:text-2xl font-bold text-white leading-tight line-clamp-2">
                             {item.title}
