@@ -1,7 +1,7 @@
 //src/components/header/Header.tsx
 
 "use client"
-
+import { useTranslations } from "next-intl"
 import { focusRing } from "@/data/portfolio"
 
 interface HeaderProps {
@@ -10,6 +10,7 @@ interface HeaderProps {
 }
 
 export function Header({ isScrolled, onOpenQuiz }: HeaderProps) {
+  const t = useTranslations("common")
   return (
     <header
       className={`fixed top-4 left-0 right-0 z-40 mx-auto max-w-6xl px-4 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
@@ -28,26 +29,26 @@ export function Header({ isScrolled, onOpenQuiz }: HeaderProps) {
             href="#"
             className={`text-slate-900 hover:text-red-600 transition-colors ${focusRing}`}
           >
-            For Brands
+            {t("nav.brands")}
           </a>
           <a
             href="#"
             className={`text-slate-500 hover:text-red-600 transition-colors ${focusRing}`}
           >
-            For Creators
+            {t("nav.creators")}
           </a>
           <a
             href="#"
             className={`text-slate-500 hover:text-red-600 transition-colors ${focusRing}`}
           >
-            Cases
+            {t("nav.cases")}
           </a>
         </nav>
         <button
           onClick={onOpenQuiz}
           className={`hidden md:flex bg-red-600 text-white px-5 py-2 rounded-full font-bold text-sm hover:bg-red-700 transition-colors items-center gap-2 shadow-sm ${focusRing}`}
         >
-          Get Started
+          {t("nav.cta")}
         </button>
       </div>
     </header>

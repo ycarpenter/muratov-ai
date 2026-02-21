@@ -9,11 +9,12 @@ import { cases } from "@/data/portfolio"
 import { CaseStudyPage } from "@/components/projects/CaseStudyPage"
 import Image from "next/image"
 import { ShutterEyes } from "@/components/ui/ShutterEyes"
+import { useTranslations } from "next-intl"
 
-// ==========================================
-// ---> src/app/page.jsx (Головний файл App)
-// ==========================================
 export default function App() {
+  const t = useTranslations("common")
+  const tCases = useTranslations("cases")
+
   const [activeCategory, setActiveCategory] = useState("All")
   const [activeService, setActiveService] = useState("All")
   const [isScrolled, setIsScrolled] = useState(false)
@@ -102,7 +103,7 @@ export default function App() {
               }}
               className={`bg-red-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-red-700 transition-colors flex items-center gap-2 ${focusRing}`}
             >
-              Start a Project <ArrowRight size={20} />
+              {t("hero.cta_primary")} <ArrowRight size={20} />
             </button>
           </div>
         </div>
@@ -113,14 +114,16 @@ export default function App() {
 
         <header className="max-w-4xl mb-12 text-center relative z-10">
           <p className="text-red-600 font-bold tracking-widest uppercase text-sm mb-6 animate-in fade-in slide-in-from-bottom-2 duration-700">
-            Selected Work — 2026
+            {t("hero.badge")}
           </p>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.9] animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100">
-            Visual <br className="md:hidden" />
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-red-600 to-red-800">Storytelling.</span>
+            {t("hero.title_part1")} <br className="md:hidden" />
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-red-600 to-red-800">
+              {t("hero.title_accent")}
+            </span>
           </h1>
           <p className="mt-8 text-xl text-slate-500 max-w-2xl mx-auto font-light leading-relaxed animate-in fade-in slide-in-from-bottom-6 duration-700 delay-200">
-            High-converting video ads for SaaS & DTC brands. AI-powered production for a fixed monthly fee.
+            {t("hero.description")}
           </p>
         </header>
 
@@ -161,6 +164,10 @@ export default function App() {
           <div className="w-full max-w-7xl flex flex-col items-center">
             <section className="w-full grid grid-cols-1 md:grid-cols-8 lg:grid-cols-12 auto-rows-[100px] gap-4 md:gap-6 grid-flow-dense text-left relative z-10">
               {displayedCases.map((item, index) => {
+                const title = tCases(`items.${item.id}.title`)
+                const desc = tCases(`items.${item.id}.desc`)
+                const localizedCategory = tCases(`categories.${item.category}`)
+                const localizedService = tCases(`services.${item.service[0]}`)
                 let spanClasses = ""
                 if (item.format === "wide")
                   spanClasses = "col-span-1 md:col-span-8 lg:col-span-8 row-span-4 lg:row-span-5"
@@ -179,14 +186,14 @@ export default function App() {
                     <div className="relative w-full flex-1 rounded-2xl overflow-hidden bg-slate-100">
                       <Image
                         src={item.thumbnail || `https://i.ytimg.com/vi/${item.youtubeId}/maxresdefault.jpg`}
-                        alt={item.title}
+                        alt={title}
                         fill
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-black/10 group-hover:bg-black/40 transition-colors duration-300"></div>
                       <div className="absolute top-4 left-4 bg-white/10 backdrop-blur-md border border-red-600 text-white text-[10px] sm:text-xs font-bold px-3 py-1.5 rounded-lg uppercase tracking-wider shadow-sm z-20">
-                        {item.category}
+                        {localizedCategory}
                       </div>
                       <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 scale-90 group-hover:scale-100 z-20">
                         <div className="w-14 h-14 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center text-red-600 shadow-lg">
@@ -200,24 +207,24 @@ export default function App() {
                       <div className="hidden md:flex absolute inset-0 bg-linear-to-t from-slate-900/90 via-slate-900/10 to-transparent flex-col justify-end p-6 md:p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
                         <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                           <h3 className="text-xl lg:text-2xl font-bold text-white leading-tight line-clamp-2">
-                            {item.title}
+                            {title}
                           </h3>
                           <p className="text-xs font-bold text-red-400 uppercase tracking-wide mt-2 mb-1">
-                            {item.service}
+                            {localizedService}
                           </p>
-                          <p className="text-sm text-slate-300 line-clamp-2">{item.desc}</p>
+                          <p className="text-sm text-slate-300 line-clamp-2">{desc}</p>
                         </div>
                       </div>
                     </div>
                     <div className="pt-4 px-2 pb-2 md:hidden">
-                      <h3 className="text-lg sm:text-xl font-bold text-slate-900 line-clamp-1">{item.title}</h3>
+                      <h3 className="text-lg sm:text-xl font-bold text-slate-900 line-clamp-1">{title}</h3>
                       <p className="text-xs font-semibold text-slate-400 uppercase tracking-wide mt-1 mb-1">
-                        {item.service}
+                        {localizedService}
                       </p>
                     </div>
                     <button
                       className={`absolute inset-0 w-full h-full z-30 rounded-3xl ${focusRing}`}
-                      aria-label={`View case study: ${item.title}`}
+                      aria-label={t("grid.aria_view_case", { title })}
                     />
                   </article>
                 )
@@ -230,7 +237,7 @@ export default function App() {
                   onClick={() => setVisibleCount((prev) => prev + (isMobile ? 3 : 6))}
                   className={`group relative px-10 py-5 bg-white border border-slate-200 rounded-full font-bold text-slate-900 flex items-center gap-4 transition-all hover:border-red-600 hover:shadow-2xl hover:shadow-red-600/10 ${focusRing}`}
                 >
-                  <span className="tracking-widest uppercase text-xs">Explore More Artifacts</span>
+                  <span className="tracking-widest uppercase text-xs">{t("grid.load_more")}</span>
                   <div className="w-8 h-8 rounded-full bg-red-600 flex items-center justify-center text-white transition-transform group-hover:rotate-90">
                     <Plus
                       size={18}
@@ -243,7 +250,7 @@ export default function App() {
           </div>
         ) : (
           <div className="w-full max-w-2xl py-24 flex flex-col items-center justify-center bg-white rounded-3xl border border-slate-200 border-dashed relative z-10">
-            <h3 className="text-xl font-bold text-slate-900 mb-2">No projects found</h3>
+            <h3 className="text-xl font-bold text-slate-900 mb-2">{t("empty_state.title")}</h3>
             <button
               onClick={() => {
                 setActiveCategory("All")
@@ -251,7 +258,7 @@ export default function App() {
               }}
               className={`px-6 py-2 bg-red-600 text-white text-sm font-bold rounded-full shadow-md ${focusRing}`}
             >
-              Reset Filters
+              {t("empty_state.reset")}
             </button>
           </div>
         )}

@@ -24,6 +24,16 @@
     "submit": "Initialize",
     "status": "System Status",
     "online": "Production API is online",
-    "capacity": "Capacity: Accepting 2 more partners."
+    "capacity": "Capacity: Accepting 2 more partners.",
+    "linkedin": "LinkedIn",
+    "instagram": "Instagram"
+  },
+  "grid": {
+    "aria_view_case": "View case study: {title}",
+    "load_more": "Explore More Artifacts"
+  },
+  "empty_state": {
+    "title": "No projects found",
+    "reset": "Reset Filters"
   }
 }

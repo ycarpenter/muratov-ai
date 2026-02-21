@@ -1,62 +1,115 @@
-[
-  {
-    "id": "1",
-    "title": "Enterprise Analytics Platform",
-    "desc": "Redefining data visualization for modern SaaS infrastructures. Focusing on conversion rates and user clarity.",
-    "category": "SaaS",
-    "service": "Motion Design",
-    "thumbnail": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
-    "format": "wide",
-    "youtubeId": "dQw4w9WgXcQ"
+{
+  "categories": {
+    "All": "Todos",
+    "SaaS": "SaaS",
+    "DTC": "DTC",
+    "Real Estate": "Bienes Raíces",
+    "Event": "Eventos",
+    "Content": "Contenido",
+    "B2B": "B2B"
   },
-  {
-    "id": "2",
-    "title": "Urban Outfitters — Winter Drive",
-    "desc": "Cinematic e-commerce experience showcasing the 2026 Winter Collection with high-energy AI editing.",
-    "category": "DTC",
-    "service": "Video Editing",
-    "thumbnail": "https://images.unsplash.com/photo-1515347619152-14142c23bf32?auto=format&fit=crop&q=80&w=800",
-    "format": "tall",
-    "youtubeId": "dQw4w9WgXcQ"
+  "services": {
+    "All": "Todos los servicios",
+    "AI video production": "Producción de video IA",
+    "Motion Design": "Motion Design",
+    "Video Editing": "Edición de video"
   },
-  {
-    "id": "3",
-    "title": "Tech Conference 2026",
-    "desc": "Main event highlight reel. Dynamic transitions and AI-powered sound design for maximum impact.",
-    "category": "Event",
-    "service": "Video Editing",
-    "thumbnail": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=800",
-    "format": "square",
-    "youtubeId": "dQw4w9WgXcQ"
-  },
-  {
-    "id": "4",
-    "title": "AI Showreel '26",
-    "desc": "A collection of our best AI-generated motion works. Pushing the boundaries of visual production.",
-    "category": "Content",
-    "service": "Motion Design",
-    "thumbnail": "https://images.unsplash.com/photo-1616469829581-73993eb86b02?auto=format&fit=crop&q=80&w=800",
-    "format": "tall",
-    "youtubeId": "dQw4w9WgXcQ"
-  },
-  {
-    "id": "5",
-    "title": "Luxury Real Estate — Riviera",
-    "desc": "Breathtaking property tour using AI stabilization and cinematic color grading for high-end buyers.",
-    "category": "Real Estate",
-    "service": "AI video production",
-    "thumbnail": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=800",
-    "format": "square",
-    "youtubeId": "dQw4w9WgXcQ"
-  },
-  {
-    "id": "6",
-    "title": "FinanceFlow App Launch",
-    "desc": "Strategic product launch video for a leading fintech app. Explainer motion design with 10k+ conversions.",
-    "category": "SaaS",
-    "service": "Motion Design",
-    "thumbnail": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800",
-    "format": "tall",
-    "youtubeId": "dQw4w9WgXcQ"
+  "seeFullVideo": "Ver video completo",
+  "vision": "La Visión",
+  "execution": "Ejecución",
+  "endOfSequence": "Fin de la secuencia",
+  "readyToDirect": "¿Listo para dirigir tu \n propia narrativa?",
+  "initiateProject": "Iniciar proyecto",
+  "items": {
+    "1": {
+      "title": "Video explicativo para herramienta de IA de documentación médica",
+      "desc": "Video explicativo claro y profesional que desglosa una compleja herramienta de IA para la salud.",
+      "vision": "Comunicar eficiencia, cumplimiento y facilidad de uso a los profesionales médicos.",
+      "execution": "Se creó un estilo de gráficos en movimiento limpio y basado en diagramas utilizando una paleta de colores médicos confiable."
+    },
+    "2": {
+      "title": "Video motivacional generado por IA para programadores",
+      "desc": "Pieza motivacional cinematográfica creada con IA, dirigida a la comunidad de desarrolladores.",
+      "vision": "Inspirar y resonar con los ingenieros de software a través de metáforas visuales abstractas inspiradas en el cyberpunk.",
+      "execution": "Se unieron resultados de Midjourney y Runway Gen-2, con corrección de color a una estética oscura y de neón, y un diseño de sonido épico."
+    },
+    "3": {
+      "title": "Creación de videos cortos con IA",
+      "desc": "Dando vida a guiones escritos utilizando exclusivamente herramientas generativas de IA.",
+      "vision": "Establecer un proceso de producción totalmente sintético capaz de convertir indicaciones de texto en videos sociales pulidos.",
+      "execution": "Se combinó la revisión de guiones con IA, voz en off sintética y clips de video generativos editados a la perfección."
+    },
+    "4": {
+      "title": "Anuncios de video con IA",
+      "desc": "Publicidad de respuesta directa utilizando visuales de IA para reducir el CPA.",
+      "vision": "Probar conceptos altamente creativos, imposibles de filmar, utilizando IA para ver qué detiene mejor el scroll.",
+      "execution": "Se produjeron visuales de productos hiperrealistas y surrealistas que capturan la atención de inmediato."
+    },
+    "5": {
+      "title": "Video animado para publicidad en Instagram y LinkedIn",
+      "desc": "Anuncio animado atractivo, adaptado para redes profesionales.",
+      "vision": "Traducir propuestas de valor complejas en una animación limpia y profesional, adecuada para LinkedIn e Instagram.",
+      "execution": "Se diseñó una animación vectorial elegante y corporativa con transiciones suaves y llamados a la acción claros."
+    },
+    "6": {
+      "title": "Video explicativo y serie de estilo cómic con IA - Ricky",
+      "desc": "Una narrativa única inspirada en los cómics y potenciada por IA.",
+      "vision": "Construir un personaje recurrente y reconocible, con un estilo visual que la audiencia espere con ansias.",
+      "execution": "Se generaron diseños de personajes consistentes a través de IA, animándolos con un estilo de superposición de cómic de semitonos."
+    },
+    "7": {
+      "title": "Creación de video a partir de audio para anuncio de Facebook",
+      "desc": "Transformar una pista de voz cruda en un anuncio de Facebook de alta conversión.",
+      "vision": "Buscar y editar material de archivo de alta calidad que coincida perfectamente con la inflexión y el tono de la pista de audio.",
+      "execution": "Búsqueda rigurosa de activos visuales, combinados con subtítulos dinámicos para atrapar a los espectadores que miran sin sonido."
+    },
+    "8": {
+      "title": "Video para Triviat AI",
+      "desc": "Contenido promocional de formato corto que explica la plataforma Triviat AI.",
+      "vision": "Simplificar las características de un producto de IA en un formato vertical fácil de digerir y visualmente estimulante.",
+      "execution": "Se utilizaron mockups de UI con estilo glassmorphism, combinados con una voz en off rápida y atractiva y texto cinético."
+    },
+    "9": {
+      "title": "Anuncio de video generado por IA para LinkedIn",
+      "desc": "Anuncio de video sintetizado por IA, dirigido a tomadores de decisiones B2B.",
+      "vision": "Aprovechar la generación de IA de vanguardia para mostrar servicios de automatización en una estética futurista y de alta tecnología.",
+      "execution": "Se integraron avatares generados por IA y voces en off sintéticas con material dinámico específico para la industria SaaS."
+    },
+    "10": {
+      "title": "Video para redes sociales (Instagram y TikTok)",
+      "desc": "Edición para redes sociales de alta retención, construida alrededor de las tendencias actuales de la plataforma.",
+      "vision": "Crear una pieza de contenido que se sienta nativa y se integre orgánicamente en la página 'Para ti'.",
+      "execution": "Se aplicaron cortes bruscos agresivos, superposición de efectos de sonido y audio en tendencia para asegurar la máxima retención del espectador."
+    },
+    "11": {
+      "title": "Edición estilo documental para canal de YouTube",
+      "desc": "Edición de formato largo impulsada por la narrativa, diseñada para un alto tiempo de visualización.",
+      "vision": "Aplicar un ritmo y narración documental nivel Netflix al contenido de YouTube para maximizar la duración promedio de visualización.",
+      "execution": "Uso extensivo de J-cuts, L-cuts, búsqueda de material de archivo y musicalización emocional."
+    },
+    "12": {
+      "title": "Video creativo para marketing tecnológico humorístico",
+      "desc": "Campaña de marketing basada en la comedia para humanizar una marca tecnológica.",
+      "vision": "Romper el estereotipo de 'corporación aburrida' a través de una edición cómica ingeniosa y perfectamente sincronizada.",
+      "execution": "El enfoque se centró en el ritmo cómico, zooms incómodos y efectos de sonido inexpresivos para mejorar el humor del guion."
+    },
+    "13": {
+      "title": "Marketing estilo Brut",
+      "desc": "Formato de marketing crudo y auténtico inspirado en el estilo de video de Brut.",
+      "vision": "Crear un video informativo estilo noticias, altamente compartible, utilizando tipografía llamativa y un ritmo rápido.",
+      "execution": "Se combinaron superposiciones de texto amarillo/blanco llamativas con metraje de alto contraste para maximizar la legibilidad en móviles."
+    },
+    "14": {
+      "title": "Edición de anuncios de Facebook / Compilación UGC",
+      "desc": "Mezcla de contenido generado por el usuario (UGC) optimizado para publicidad social paga.",
+      "vision": "Crear confianza a través del volumen. Compilando múltiples reseñas positivas en un anuncio rápido y persuasivo.",
+      "execution": "Se unieron los mejores ganchos de varios creadores, se niveló el audio y se agregó un paquete de gráficos de marca unificador."
+    },
+    "15": {
+      "title": "Video corto de Motion Graphics",
+      "desc": "Gráficos en movimiento verticales de ritmo rápido, optimizados para redes sociales.",
+      "vision": "Ofrecer una secuencia rápida y visualmente atractiva, optimizada para los feeds de desplazamiento vertical.",
+      "execution": "Se utilizó seguimiento de movimiento avanzado, elementos 3D y tipografía cinética para captar la atención en los primeros 3 segundos."
+    }
   }
-]
+}

@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation"
-import { setRequestLocale } from "next-intl/server"
+import { getTranslations, setRequestLocale } from "next-intl/server"
 import { Link } from "@/i18n/routing"
 import { ArrowLeft } from "lucide-react"
 import { cases } from "@/data/portfolio"
@@ -22,6 +22,10 @@ export default async function CasePage({ params }: Props) {
   if (!selectedCase) {
     notFound()
   }
+
+  // Fetch translations for this specific case study and general cases dictionary
+  const t = await getTranslations("cases")
+  const tItem = await getTranslations(`cases.items.${selectedCase.id}`)
 
   // A11y: Rule 3 Focus Ring
   const focusRing =
@@ -51,8 +55,8 @@ export default async function CasePage({ params }: Props) {
         <div className="absolute inset-0 w-full h-full">
           <iframe
             className="absolute w-[300vw] h-[300vh] sm:w-[150vw] sm:h-[150vh] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-60"
-            src={`https://www.youtube-nocookie.com/embed/${selectedCase.youtubeId}?autoplay=1&mute=1&modestbranding=1&rel=0&controls=0&showinfo=0&loop=1&playlist=${selectedCase.youtubeId}`}
-            title={`${selectedCase.title} background video`}
+            src={`https://www.youtube.com/embed/${selectedCase.youtubeId}?autoplay=1&mute=1&modestbranding=1&rel=0&controls=0&showinfo=0&loop=1&playlist=${selectedCase.youtubeId}`}
+            title={`${tItem("title")} background video`}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             loading="lazy"
             style={{ border: "none" }}
@@ -65,13 +69,14 @@ export default async function CasePage({ params }: Props) {
         <div className="relative z-10 container mx-auto px-6 md:px-12 pb-20 md:pb-32">
           <div className="flex gap-4 mb-8">
             <span className="text-crimson-600 text-xs font-bold tracking-[0.2em] uppercase">
-              {selectedCase.service}
+              {/* Correctly joining services if multiple apply */}
+              {selectedCase.service.join(", ")}
             </span>
             <span className="text-slate-400 text-xs font-bold tracking-[0.2em] uppercase">{selectedCase.category}</span>
           </div>
           {/* Rule 7: Єдиний H1 на сторінці */}
           <h1 className="text-5xl md:text-7xl lg:text-9xl font-black text-white tracking-tighter leading-[0.85] max-w-5xl drop-shadow-2xl">
-            {selectedCase.title}
+            {tItem("title")}
           </h1>
         </div>
       </section>
@@ -82,22 +87,22 @@ export default async function CasePage({ params }: Props) {
           {/* Короткий опис (Лід) */}
           <div className="md:col-span-12 lg:col-span-10 lg:col-start-2 text-center">
             <p className="text-3xl md:text-5xl text-slate-900 font-light leading-[1.1] tracking-tight">
-              {selectedCase.desc}
+              {tItem("desc")}
             </p>
           </div>
 
           {/* Деталі (Чистий Alabaster стиль) */}
           <div className="md:col-span-12 lg:col-span-5 lg:col-start-2 flex flex-col gap-12 pt-16 border-t border-slate-200">
             <div>
-              <h2 className="text-xs font-bold text-crimson-600 uppercase tracking-widest mb-6">The Vision</h2>
-              <p className="text-slate-600 leading-relaxed text-lg">{selectedCase.content.vision}</p>
+              <h2 className="text-xs font-bold text-crimson-600 uppercase tracking-widest mb-6">{t("vision")}</h2>
+              <p className="text-slate-600 leading-relaxed text-lg">{tItem("vision")}</p>
             </div>
           </div>
 
           <div className="md:col-span-12 lg:col-span-5 flex flex-col gap-12 pt-16 border-t border-slate-200">
             <div>
-              <h2 className="text-xs font-bold text-crimson-600 uppercase tracking-widest mb-6">Execution</h2>
-              <p className="text-slate-600 leading-relaxed text-lg">{selectedCase.content.execution}</p>
+              <h2 className="text-xs font-bold text-crimson-600 uppercase tracking-widest mb-6">{t("execution")}</h2>
+              <p className="text-slate-600 leading-relaxed text-lg">{tItem("execution")}</p>
             </div>
           </div>
         </div>
@@ -105,15 +110,15 @@ export default async function CasePage({ params }: Props) {
 
       {/* 3. ELEGANT NEXT STEP (CTA) */}
       <section className="container mx-auto px-6 md:px-12 pt-16 pb-40 border-t border-slate-100 text-center bg-white relative z-20">
-        <p className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-8">End of Sequence</p>
-        <h2 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter mb-12">
-          Ready to direct your <br className="hidden md:block" /> own narrative?
+        <p className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-8">{t("endOfSequence")}</p>
+        <h2 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter mb-12 whitespace-pre-line">
+          {t("readyToDirect")}
         </h2>
         <Link
           href="/#contact"
           className={`inline-block bg-crimson-600 text-white px-10 py-4 rounded-full font-bold text-sm hover:bg-crimson-700 hover:shadow-elevation-md transition-all duration-300 ${focusRing}`}
         >
-          Initiate Project
+          {t("initiateProject")}
         </Link>
       </section>
     </div>

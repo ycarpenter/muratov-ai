@@ -24,6 +24,16 @@
     "submit": "Ініціалізувати",
     "status": "Статус системи",
     "online": "Production API в мережі",
-    "capacity": "Доступність: приймаємо ще 2 партнерів."
+    "capacity": "Доступність: приймаємо ще 2 партнерів.",
+    "linkedin": "LinkedIn",
+    "instagram": "Instagram"
+  },
+  "grid": {
+    "aria_view_case": "Переглянути кейс: {title}",
+    "load_more": "Завантажити більше кейсів"
+  },
+  "empty_state": {
+    "title": "Кейси не знайдено",
+    "reset": "Скинути фільтри"
   }
 }
