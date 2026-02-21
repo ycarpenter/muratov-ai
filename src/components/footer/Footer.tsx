@@ -1,14 +1,16 @@
 "use client"
 
-import React from "react"
 import { ArrowRight } from "lucide-react"
 import { focusRing } from "@/data/portfolio"
+import { useTranslations } from "next-intl"
 
 interface FooterProps {
   onOpenQuiz: () => void
 }
 
 export function Footer({ onOpenQuiz }: FooterProps) {
+  const t = useTranslations("common")
+
   return (
     <footer className="mt-32 border-t border-slate-200 bg-white pt-24 pb-8 relative z-10">
       <div className="container mx-auto px-6 text-center lg:text-left">
@@ -39,26 +41,26 @@ export function Footer({ onOpenQuiz }: FooterProps) {
                   }}
                   className={`bg-red-600 text-white px-8 py-3 rounded-full text-sm font-bold hover:bg-red-700 transition-colors flex items-center justify-center gap-2 ${focusRing}`}
                 >
-                  Initialize <ArrowRight size={16} />
+                  {t("footer.submit")} <ArrowRight size={16} />
                 </button>
               </form>
             </div>
           </div>
         </div>
-        <div className="pt-8 border-t border-slate-100 text-xs text-slate-400 font-medium flex justify-between items-center">
+        <div className="pt-8 border-t border-slate-100 text-xs text-slate-00 font-medium flex justify-between items-center">
           <p>© {new Date().getFullYear()} muratov.ai — Engineered in Kyiv.</p>
           <div className="flex gap-6">
             <a
               href="#"
               className="hover:text-red-600 transition-colors"
             >
-              LinkedIn
+              {t("footer.linkedin")}
             </a>
             <a
               href="#"
               className="hover:text-red-600 transition-colors"
             >
-              Instagram
+              {t("footer.instagram")}
             </a>
           </div>
         </div>

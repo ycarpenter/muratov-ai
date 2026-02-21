@@ -24,6 +24,16 @@
     "submit": "Inicializar",
     "status": "Estado del Sistema",
     "online": "API de producción en línea",
-    "capacity": "Capacidad: Aceptando 2 socios más."
+    "capacity": "Capacidad: Aceptando 2 socios más.",
+    "linkedin": "LinkedIn",
+    "instagram": "Instagram"
+  },
+  "grid": {
+    "aria_view_case": "Ver caso de estudio: {title}",
+    "load_more": "Explorar más artefactos"
+  },
+  "empty_state": {
+    "title": "No se encontraron proyectos",
+    "reset": "Reiniciar filtros"
   }
 }
