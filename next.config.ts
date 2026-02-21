@@ -9,6 +9,16 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   // прибираємо X-Powered-By для безпеки та швидкості
   poweredByHeader: false,
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "i.ytimg.com",
+        port: "",
+        pathname: "/**",
+      },
+    ],
+  },
 }
 
 export default withNextIntl(nextConfig)

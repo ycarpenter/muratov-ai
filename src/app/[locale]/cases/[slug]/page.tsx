@@ -2,7 +2,7 @@ import { notFound } from "next/navigation"
 import { setRequestLocale } from "next-intl/server"
 import { Link } from "@/i18n/routing"
 import { ArrowLeft } from "lucide-react"
-import { cases } from "@/data/cases"
+import { cases } from "@/data/portfolio"
 
 // Імітація бази даних / CMS. У реальному проекті це буде fetch()
 const getCaseBySlug = async (slug: string) => {
@@ -31,7 +31,7 @@ export default async function CasePage({ params }: Props) {
 
   return (
     <div className="min-h-screen bg-white text-slate-900 font-sans selection:bg-crimson-600 selection:text-white overflow-x-hidden">
-      <section className="relative w-full h-[100vh] bg-black flex flex-col justify-end overflow-hidden">
+      <section className="relative w-full h-100vh bg-black flex flex-col justify-end overflow-hidden">
         <nav className="absolute top-0 left-0 right-0 h-24 px-6 md:px-12 flex items-center justify-between bg-linear-to-b from-black/80 to-transparent z-50 pointer-events-none">
           <Link
             href="/"
@@ -51,7 +51,7 @@ export default async function CasePage({ params }: Props) {
         <div className="absolute inset-0 w-full h-full">
           <iframe
             className="absolute w-[300vw] h-[300vh] sm:w-[150vw] sm:h-[150vh] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-60"
-            src={`https://www.youtube.com/embed/${selectedCase.youtubeId}?autoplay=1&mute=1&modestbranding=1&rel=0&controls=0&showinfo=0&loop=1&playlist=${selectedCase.youtubeId}`}
+            src={`https://www.youtube-nocookie.com/embed/${selectedCase.youtubeId}?autoplay=1&mute=1&modestbranding=1&rel=0&controls=0&showinfo=0&loop=1&playlist=${selectedCase.youtubeId}`}
             title={`${selectedCase.title} background video`}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             loading="lazy"
