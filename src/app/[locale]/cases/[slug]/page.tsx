@@ -2,7 +2,7 @@ import { notFound } from "next/navigation"
 import { setRequestLocale } from "next-intl/server"
 import { Link } from "@/i18n/routing"
 import { ArrowLeft } from "lucide-react"
-import { cases } from "@/data/cases"
+import { cases } from "@/data/portfolio"
 
 // Імітація бази даних / CMS. У реальному проекті це буде fetch()
 const getCaseBySlug = async (slug: string) => {
