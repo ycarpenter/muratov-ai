@@ -2,6 +2,7 @@
 
 "use client"
 import { useTranslations } from "next-intl"
+import { Link } from "@/i18n/routing" // СУВОРО: Тільки наш i18n Link
 import { focusRing } from "@/data/portfolio"
 
 interface HeaderProps {
@@ -11,6 +12,7 @@ interface HeaderProps {
 
 export function Header({ isScrolled, onOpenQuiz }: HeaderProps) {
   const t = useTranslations("common")
+
   return (
     <header
       className={`fixed top-4 left-0 right-0 z-40 mx-auto max-w-6xl px-4 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
@@ -18,34 +20,44 @@ export function Header({ isScrolled, onOpenQuiz }: HeaderProps) {
       }`}
     >
       <div className="h-16 rounded-2xl bg-white/80 backdrop-blur-xl border border-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex items-center justify-between px-6">
-        <a
-          href="#"
-          className={`text-xl font-black tracking-tighter ${focusRing}`}
+        {/* Логотип: Link замість <a> */}
+        <Link
+          href="/"
+          aria-label={t("nav.logoAria") || "Go to homepage"}
+          className={`text-xl font-black tracking-tighter transition-colors hover:opacity-80 ${focusRing}`}
         >
           muratov<span className="text-red-600">.ai</span>
-        </a>
-        <nav className="hidden md:flex items-center gap-8 font-medium text-sm">
-          <a
-            href="#"
+        </Link>
+
+        {/* A11y: Додано aria-label для навігації */}
+        <nav
+          aria-label="Main navigation"
+          className="hidden md:flex items-center gap-8 font-medium text-sm"
+        >
+          {/* Роутинг через i18n Link */}
+          <Link
+            href="/brands"
             className={`text-slate-900 hover:text-red-600 transition-colors ${focusRing}`}
           >
             {t("nav.brands")}
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            href="/creators"
             className={`text-slate-500 hover:text-red-600 transition-colors ${focusRing}`}
           >
             {t("nav.creators")}
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            href="/cases"
             className={`text-slate-500 hover:text-red-600 transition-colors ${focusRing}`}
           >
             {t("nav.cases")}
-          </a>
+          </Link>
         </nav>
+
         <button
           onClick={onOpenQuiz}
+          // A11y Requirement 3: фокус-ринг вже у твоїй змінній focusRing
           className={`hidden md:flex bg-red-600 text-white px-5 py-2 rounded-full font-bold text-sm hover:bg-red-700 transition-colors items-center gap-2 shadow-sm ${focusRing}`}
         >
           {t("nav.cta")}

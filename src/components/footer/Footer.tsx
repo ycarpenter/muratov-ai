@@ -3,6 +3,7 @@
 import { ArrowRight } from "lucide-react"
 import { focusRing } from "@/data/portfolio"
 import { useTranslations } from "next-intl"
+import LanguageSwitcher from "../ui/LanguageSwitcher"
 
 interface FooterProps {
   onOpenQuiz: () => void
@@ -17,10 +18,21 @@ export function Footer({ onOpenQuiz }: FooterProps) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-8 mb-24">
           <div className="lg:col-span-8 flex flex-col justify-between">
             <div>
-              <h2 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter text-slate-900 mb-8 leading-[0.9]">
-                Let&apos;s <span className="text-red-600">generate</span>
-                <br /> your next winner.
+              <h2 className="text-4xl md:text-6xl lg:text-8xl font-black tracking-tighter text-neutral-900 mb-8 leading-[0.85]">
+                {t.rich("footer.title", {
+                  red: (chunks) => <span className="text-red-600 font-black">{chunks}</span>,
+                  // ПРИБЕРИ 'hidden'. Просто <br /> або адаптивний:
+                  br: () => <br className="block" />,
+                })}
               </h2>
+
+              {/* Додатковий контроль для мобільних пристроїв через CSS, якщо потрібно */}
+              <style jsx>{`
+                h2 {
+                  word-break: keep-all;
+                  overflow-wrap: break-word;
+                }
+              `}</style>
             </div>
             <div className="relative max-w-2xl group mt-8 lg:mt-0">
               <form className="relative flex flex-col sm:flex-row items-stretch sm:items-center bg-white border border-slate-200 p-2 focus-within:border-red-600 focus-within:ring-1 focus-within:ring-red-600 transition-all shadow-sm rounded-3xl sm:rounded-full">
@@ -28,9 +40,9 @@ export function Footer({ onOpenQuiz }: FooterProps) {
                   <span className="text-red-600 font-mono font-bold mr-3">{">"}</span>
                   <input
                     type="text"
-                    placeholder="Enter your brand URL..."
+                    placeholder={t("footer.input_placeholder")}
                     className="w-full bg-transparent outline-none font-mono text-sm text-slate-900"
-                    aria-label="Enter your brand URL"
+                    aria-label={t("footer.input_placeholder")}
                   />
                 </div>
                 <button
@@ -48,7 +60,7 @@ export function Footer({ onOpenQuiz }: FooterProps) {
           </div>
         </div>
         <div className="pt-8 border-t border-slate-100 text-xs text-slate-00 font-medium flex justify-between items-center">
-          <p>© {new Date().getFullYear()} muratov.ai — Engineered in Kyiv.</p>
+          <p>{t("footer.copyright", { year: new Date().getFullYear() })}</p>
           <div className="flex gap-6">
             <a
               href="#"
@@ -63,6 +75,7 @@ export function Footer({ onOpenQuiz }: FooterProps) {
               {t("footer.instagram")}
             </a>
           </div>
+          <LanguageSwitcher />
         </div>
       </div>
     </footer>

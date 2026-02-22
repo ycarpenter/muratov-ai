@@ -3,7 +3,8 @@
     "brands": "For Brands",
     "creators": "For Creators",
     "cases": "Cases",
-    "cta": "Get Started"
+    "cta": "Get Started",
+    "logoAria": "Go to homepage"
   },
   "hero": {
     "badge": "Selected Work — 2026",
@@ -19,14 +20,15 @@
     "all": "All"
   },
   "footer": {
-    "title": "Let's generate your next winner.",
+    "title": "Let's <red>generate</red> your next winner.",
     "input_placeholder": "Enter your brand URL or goal...",
     "submit": "Initialize",
     "status": "System Status",
     "online": "Production API is online",
     "capacity": "Capacity: Accepting 2 more partners.",
     "linkedin": "LinkedIn",
-    "instagram": "Instagram"
+    "instagram": "Instagram",
+    "copyright": "© {year} muratov.ai. All rights reserved."
   },
   "grid": {
     "aria_view_case": "View case study: {title}",

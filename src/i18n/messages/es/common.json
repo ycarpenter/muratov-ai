@@ -3,7 +3,8 @@
     "brands": "Para Marcas",
     "creators": "Para Creadores",
     "cases": "Casos",
-    "cta": "Empezar"
+    "cta": "Empezar",
+    "logoAria": "Ir a la página de inicio"
   },
   "hero": {
     "badge": "Trabajos Seleccionados — 2026",
@@ -26,7 +27,8 @@
     "online": "API de producción en línea",
     "capacity": "Capacidad: Aceptando 2 socios más.",
     "linkedin": "LinkedIn",
-    "instagram": "Instagram"
+    "instagram": "Instagram",
+    "copyright": "© {year} muratov.ai. Todos los derechos reservados."
   },
   "grid": {
     "aria_view_case": "Ver caso de estudio: {title}",
