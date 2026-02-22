@@ -1,3 +1,5 @@
+//src/app/page.tsx
+
 import { headers } from "next/headers"
 import { redirect } from "next/navigation"
 import { routing } from "@/i18n/routing"

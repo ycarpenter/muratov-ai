@@ -9,9 +9,6 @@ export default getRequestConfig(async ({ requestLocale }) => {
     locale = routing.defaultLocale
   }
 
-  // Завантаження словників.
-  // Групуємо їх у простори імен, щоб уникнути конфліктів ключів.
-  // Виклик у компонентах буде: const t = useTranslations('common.nav') або useTranslations('cases...')
   return {
     locale,
     messages: {

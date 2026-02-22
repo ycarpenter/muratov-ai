@@ -1,4 +1,6 @@
-import type { Metadata } from "next"
+//src/app/[locale]/layout.tsx
+
+import type { Metadata, Viewport } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 import { NextIntlClientProvider } from "next-intl"
 import { getMessages, setRequestLocale } from "next-intl/server"
@@ -6,8 +8,14 @@ import { notFound } from "next/navigation"
 import { routing } from "@/i18n/routing"
 import "../globals.css"
 
-// Імпортуємо нашу клієнтську обгортку
 import ClientLayout from "@/components/layout/LayoutClientWrapper"
+
+export const viewport: Viewport = {
+  themeColor: "#050505",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+}
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,6 +30,14 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "muratov.ai | Creative Production Studio",
   description: "Visual Storytelling. High-converting video ads for SaaS and DTC brands.",
+  icons: [
+    { rel: "icon", url: "/favicon.ico" },
+    { rel: "icon", type: "image/png", sizes: "192x192", url: "/icons/icon-192x192.png" },
+    { rel: "icon", type: "image/png", sizes: "512x512", url: "/icons/icon-512x512.png" },
+    { rel: "apple-touch-icon", sizes: "192x192", url: "/icons/icon-192x192.png" },
+    { rel: "apple-touch-icon", sizes: "512x512", url: "/icons/icon-512x512.png" },
+  ],
+  manifest: "/manifest.json",
 }
 
 export function generateStaticParams() {

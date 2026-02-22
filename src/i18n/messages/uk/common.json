@@ -3,7 +3,8 @@
     "brands": "Брендам",
     "creators": "Креаторам",
     "cases": "Кейси",
-    "cta": "Розпочати"
+    "cta": "Розпочати",
+    "logoAria": "Перейти на головну сторінку"
   },
   "hero": {
     "badge": "Обрані роботи — 2026",
@@ -26,7 +27,8 @@
     "online": "Production API в мережі",
     "capacity": "Доступність: приймаємо ще 2 партнерів.",
     "linkedin": "LinkedIn",
-    "instagram": "Instagram"
+    "instagram": "Instagram",
+    "copyright": "© {year} muratov.ai. Всі права захищені."
   },
   "grid": {
     "aria_view_case": "Переглянути кейс: {title}",
